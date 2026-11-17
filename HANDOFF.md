@@ -37,7 +37,10 @@ the wardrobe so the phone works on any network.
   so YOLO / U-2-Net / CLIP run on CPU (2-3 s per photo). Only Ollama uses the GPU.
 - Ollama 0.40.16 at `D:\Ollama\ollama.exe`, model `qwen3.5:4b` (vision + thinking),
   `OLLAMA_KEEP_ALIVE=2m`. Cold model load 10-40 s; warm tagging call about 2.5 s.
-- Node 26 at `D:\Node.js`. git is NOT installed.
+- Node 26 at `D:\Node.js`. Git 2.56 is Portable Git at `D:\Git\PortableGit\cmd\git.exe`
+  (not on PATH). Repository: https://github.com/asameer4rxa/KaporAI (public, branch `main`);
+  commits use the GitHub private address `asameer4rxa@users.noreply.github.com`.
+  Before every commit, check `git diff --cached` contains no secrets or wardrobe data.
 - User-level env vars already set: `PIP_CACHE_DIR=D:\pip_cache`, `HF_HOME`, `TORCH_HOME`,
   `U2NET_HOME`, `REMBG_HOME`, `OLLAMA_MODELS`. An agent's shell may not inherit them:
   set `$env:PIP_CACHE_DIR='D:\pip_cache'` / `$env:npm_config_cache='D:\npm_cache'` per command.
