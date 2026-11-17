@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------------------
+# Secrets - never commit. Templates: .supabase.env.example, mobile/.env.example
+# ---------------------------------------------------------------------------
+.supabase.env
+.unsplash.env
+.api_key
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Personal data: the wardrobe itself (photos of the owner's clothes and of them)
+# ---------------------------------------------------------------------------
+wardrobe.db
+wardrobe.db-*
+chroma_db/
+wardrobe_raw/
+wardrobe_cutouts/
+wardrobe_removed/
+worn_photos/
+outfits/
+user_profile.json
+.cloud_state.json
+backups/
+_smoketest/
+
+# ---------------------------------------------------------------------------
+# Big or machine-specific: recreated by setup (see README)
+# ---------------------------------------------------------------------------
+venv/
+models/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Expo / Node
+node_modules/
+mobile/dist/
+mobile/.expo/
+mobile/.expo-home/
+mobile/.metro-cache/
+mobile/web-build/
+*.tsbuildinfo
+npm-debug.*
+
+# Claude Code: keep the shared launch config, not local settings
+.claude/*
+!.claude/launch.json
+mobile/.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

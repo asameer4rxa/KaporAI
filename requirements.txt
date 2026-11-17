@@ -1,0 +1,25 @@
+# FashionAI backend - Python 3.13. Versions are the ones this project was built and tested with.
+#
+# Install into a venv ON THE D: DRIVE, with pip's cache on D: too (see README "Setup"):
+#   $env:PIP_CACHE_DIR='D:\pip_cache'
+#   python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.15.0 torchvision==0.29.2
+#   python -m pip install -r requirements.txt
+#
+# torch is the CPU build on purpose: YOLO, U-2-Net and CLIP run on the CPU (2-3 s per photo)
+# so the whole GPU stays free for Ollama.
+
+torch==2.15.0
+torchvision==0.29.2
+ultralytics==8.4.215        # YOLOv8n person detection
+rembg==2.0.87               # U-2-Net background removal + u2net_cloth_seg clothing masks
+onnxruntime==1.32.0
+open_clip_torch==4.2.2      # OpenCLIP ViT-B-32 image / text embeddings
+chromadb==1.5.9             # vector store
+fastapi==0.163.1
+uvicorn==0.54.0
+python-multipart==0.0.33    # photo uploads
+requests==2.34.2
+pillow==13.0.0
+numpy==2.5.5
+scipy==1.18.1
+nvidia-ml-py==13.615.71     # GPU temperature for thermal pacing (optional)
